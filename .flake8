@@ -6,6 +6,5 @@ exclude =
     __pycache__,
     ./*venv/*,
     ./*pytest_cache/*,
-    ./alembic/*,
 
 max-complexity = 10
