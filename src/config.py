@@ -6,8 +6,8 @@ class Config(BaseSettings):
     DEBUG: bool = False
     MAIL_USERNAME: str = ''
     MAIL_PASSWORD: str = ''
-    MAIL_PORT: int = 25
     MAIL_SERVER: str = 'localhost'
+    MAIL_PORT: int = 25
     MAIL_TLS: bool = False
     MAIL_SSL: bool = False
     MAIL_FROM: EmailStr

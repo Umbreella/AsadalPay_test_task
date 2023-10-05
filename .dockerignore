@@ -47,18 +47,22 @@ pip-log.txt
 # Unit test / coverage reports
 .coverage
 .pytest_cache
+.coveragerc
+pytest.ini
 
 .DS_Store
 .idea/*
 .python-version
 .vscode/*
 
+/test.py
+/test_*.*
+/tests
+
 /setup.cfg
 MANIFEST.in
 /setup.py
 /docs/site/*
-/tests/fixtures/simple_project/setup.py
-/tests/fixtures/project_with_extras/setup.py
 .mypy_cache
 
 .venv
@@ -68,5 +72,14 @@ pip-wheel-metadata
 
 poetry/core/*
 
-.env.*
+# Configs
+.gitignore
+.flake8
+.isort.cfg
+.pre-commit-config.yaml
+.env*
 *.log
+compose.yaml
+Dockerfile
+README.md
+TaskDescription.pdf
