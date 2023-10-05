@@ -1,6 +1,18 @@
+import logging
+
 import uvicorn
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
+
+from src.api.urls import add_routes
+
+logging.basicConfig(
+    filename='mailer.log',
+    filemode='a',
+    format='%(asctime)s | %(levelname)s | %(message)s',
+    datefmt='%H:%M:%S',
+    level=logging.INFO,
+)
 
 
 def create_app() -> FastAPI:
@@ -22,6 +34,8 @@ def create_app() -> FastAPI:
         allow_methods=['*'],
         allow_headers=['*'],
     )
+
+    add_routes(app)
 
     return app
 
